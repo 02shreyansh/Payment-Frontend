@@ -3,7 +3,7 @@ import {Box,Stack} from "@chakra-ui/react"
 import Card from './Cards'
 const Home = () => {
     const checkoutHandler=async(amount)=>{
-        const response =await fetch('http://localhost:4000/api/checkout',{
+        const response =await fetch('https://backend-mgr5.onrender.com/api/checkout',{
             method:'POST',
             headers:{
                 'Content-Type':'application/json',
@@ -20,7 +20,7 @@ const Home = () => {
             description: "Test Transaction",
             image: "https://avatars.githubusercontent.com/u/137887705?v=4",
             order_id: order.id, 
-            callback_url: "http://localhost:4000/api/paymentSuccess",
+            callback_url: "https://backend-mgr5.onrender.com/api/paymentSuccess",
             prefill: {
                 name: "Gaurav Kumar",
                 email: "gaurav.kumar@example.com",
